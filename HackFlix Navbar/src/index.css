@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #0d0d2b; /* Fondo azul oscuro */
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #00d1ff; /* Azul neón brillante */
+  font-weight: bold;
+  text-shadow: 0 0 8px #00d1ff, 0 0 15px #007acc;
+}
+
+h2 {
+  color: #00d1ff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-shadow: 0 0 8px #00d1ff;
+}
+
+p {
+  color: #c4c4ff;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.movie-card {
+  width: 220px;
+  background-color: #1a1a3a; /* Fondo azul oscuro */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4); /* Efecto neón */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6); /* Efecto neón brillante */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card img:hover {
+  filter: brightness(1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brillo neón */
+}
+
+.movie-card h3 {
+  font-size: 1.3rem;
+  margin: 15px 10px 5px;
+  color: #00d1ff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #00d1ff, 0 0 12px #007acc;
+}
+
+.movie-card h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-card p {
+  font-size: 1.1rem;
+  color: #00e6e6; /* Cian brillante */
+  margin-bottom: 15px;
+}
+
+.rating-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #1f1f4d; /* Fondo oscuro azul */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
+  margin-bottom: 30px;
+}
+
+.stars-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.stars-container span {
+  color: #c4c4ff;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 0 10px #007acc;
+}
+
+button:hover {
+  background-color: #00d1ff;
+  box-shadow: 0 0 20px #00d1ff;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Página de detalles de película */
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 800px;
+  background-color: #1a1a3a; /* Fondo azul oscuro */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+.movie-details img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.movie-details h1 {
+  font-size: 2.5rem;
+  color: #00d1ff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px #00d1ff, 0 0 20px #007acc;
+}
+
+.movie-details p {
+  font-size: 1.2rem;
+  color: #c4c4ff;
+  text-align: justify;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Botón de volver a la página principal */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007acc;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #007acc;
+}
+
+.back-button:hover {
+  background-color: #00d1ff;
+  box-shadow: 0 0 20px #00d1ff;
+  transform: scale(1.05);
+}
+
+.back-button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Barra de navegación estilo neón */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #1f1f4d; /* Fondo azul oscuro */
+  border-bottom: 2px solid #007acc;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
+}
+
+.navbar-brand {
+  color: #00d1ff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00d1ff, 0 0 20px #007acc;
+  margin: 0;
+  cursor: pointer;
+}
+
+.navbar-brand:hover {
+  color: #00e6e6;
+}
+
+.navbar .form-control {
+  background-color: #1a1a3a;
+  color: #fff;
+  border: 1px solid #00d1ff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+}
+
+.navbar .form-control:focus {
+  outline: none;
+  border-color: #00e6e6;
+  box-shadow: 0 0 10px #00e6e6;
+}
+
+.navbar .btn {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px #007acc;
+}
+
+.navbar .btn:hover {
+  background-color: #00d1ff;
+  box-shadow: 0 0 20px #00d1ff;
+  transform: scale(1.05);
+}
