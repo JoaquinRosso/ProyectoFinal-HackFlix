@@ -55,6 +55,7 @@ p {
   box-shadow: 0 0 15px rgba(0, 0, 255, 0.4); /* Efecto neón */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  margin: 0 auto; /* Center card horizontally */
 }
 
 .movie-card:hover {
@@ -93,17 +94,18 @@ p {
   font-size: 1.1rem;
   color: #00e6e6; /* Cian brillante */
   margin-bottom: 15px;
+  text-align: justify;
 }
 
 .rating-filter {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 30px;
+  padding: 3px 15px;
   background-color: #1f1f4d; /* Fondo oscuro azul */
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
-  margin-bottom: 30px;
+  box-shadow: 0 0 5px #00d1ff;
+  margin-bottom: 2px;
 }
 
 .stars-container {
@@ -117,10 +119,22 @@ p {
   color: #c4c4ff;
   font-size: 1.2rem;
 }
+.sort-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.sort-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
 button {
   padding: 10px 20px;
-  background-color: #007acc;
+  background-color: rgb(0, 122, 204);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -174,6 +188,16 @@ button:focus {
   text-align: justify;
   margin-bottom: 30px;
   line-height: 1.6;
+}
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in the flex container */
+}
+.movie-item p {
+  max-width: 400px; /* Limit the width of the text */
+  margin: 15px auto; /* Center the text */
+  text-align: justify;
 }
 
 /* Botón de volver a la página principal */
@@ -234,7 +258,7 @@ a {
   border: 1px solid #00d1ff;
   border-radius: 8px;
   padding: 10px;
-  width: 300px;
+  width: 200px;
 }
 
 .navbar .form-control:focus {

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
@@ -31,8 +32,10 @@ function CustomNavbar({ rating, onRatingChange, onSearch }) {
           size={24}
           activeColor="#ffd700"
         />
-        <Button variant="primary">Buscar</Button>
       </div>
+      <Link to="/recomendaciones" className="btn btn-link">
+        Recomendaciones
+      </Link>
     </Navbar>
   );
 }
