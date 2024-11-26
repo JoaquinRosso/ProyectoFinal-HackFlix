@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import movies from "../data/movies"; // Import local movie data
+import movies from "../data/movies"; 
 
 function MovieDetails() {
   const { id } = useParams();
@@ -11,9 +11,9 @@ function MovieDetails() {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
-      const localMovie = movies.find((m) => m.id === Number(id)); // Check if the movie is in local data
+      const localMovie = movies.find((m) => m.id === Number(id)); 
       if (localMovie) {
-        setMovie(localMovie); // Use local data
+        setMovie(localMovie); 
         setLoading(false);
         return;
       }

@@ -1,6 +1,6 @@
 import React from "react";
-import movies from "../data/movies"; // Import the recommendations data
-import MovieCard from "./MovieCard"; // Reuse MovieCard for individual movies
+import movies from "../data/movies";
+import MovieCard from "./MovieCard"; 
 
 function Recommendations() {
   return (
