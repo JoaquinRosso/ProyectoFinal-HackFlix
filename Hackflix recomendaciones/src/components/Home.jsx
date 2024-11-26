@@ -5,6 +5,8 @@ import MovieList from "./MovieList"; // importa el componente que muestra la lis
 import Navbar from "./Navbar"; // importa el componente de la barra de navegacion que contiene el filtro de busqueda y calificacion
 
 function Home() {
+  const [sortAsc, setSortAsc] = useState(true); // Controla el orden ascendente/descendente
+  const [isSorted, setIsSorted] = useState(false); // Controla si QuickSort está activo
   const [rating, setRating] = useState(0); // define el estado de la calificacion (rating) de las peliculas
   const [searchTerm, setSearchTerm] = useState(""); // define el estado del termino de busqueda
   const [movies, setMovies] = useState([]); // define el estado de las peliculas, inicialmente vacio
@@ -53,6 +55,40 @@ function Home() {
     }
   };
 
+  const quickSort = (array, key, asc = true) => {
+    if (array.length <= 1) return array;
+    const pivot = array[0];
+    const left = [];
+    const right = [];
+
+    for (let i = 1; i < array.length; i++) {
+      if (asc ? array[i][key] < pivot[key] : array[i][key] > pivot[key]) {
+        left.push(array[i]);
+      } else {
+        right.push(array[i]);
+      }
+    }
+
+    return [...quickSort(left, key, asc), pivot, ...quickSort(right, key, asc)];
+  };
+
+  const toggleSortOrder = () => {
+    const sortedMovies = quickSort(movies, "release_date", sortAsc);
+    setMovies(sortedMovies);
+    setSortAsc(!sortAsc);
+    setIsSorted(true);
+  };
+
+  const resetFilters = () => {
+    setRating(0);
+    setSearchTerm("");
+    setPage(1);
+    setHasMore(true);
+    setSortAsc(true);
+    setIsSorted(false);
+    fetchMovies(true); // Reinicia la lista de películas
+  };
+
   useEffect(() => {
     fetchMovies(true);
     // llama a fetchMovies cuando cambian el rating o el termino de busqueda, reinicia la lista de peliculas
@@ -85,6 +121,14 @@ function Home() {
           // reinicia el estado cuando cambia el termino de busqueda
         }}
       />
+      <div className="sort-container">
+        <button onClick={toggleSortOrder} className="btn btn-primary">
+          Ordenar por Año ({sortAsc ? "Ascendente" : "Descendente"})
+        </button>
+        <button onClick={resetFilters} className="btn btn-secondary">
+          Restablecer Filtros
+        </button>
+      </div>
       <InfiniteScroll
         dataLength={movies.length}
         // establece la longitud de la lista de peliculas actual
