@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #0d0d2b; /* Fondo azul oscuro */
+  background-color: #0d0d2b;
   color: #fff;
 }
 
@@ -19,7 +19,7 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 15px;
-  color: #00d1ff; /* Azul neón brillante */
+  color: #00d1ff;
   font-weight: bold;
   text-shadow: 0 0 8px #00d1ff, 0 0 15px #007acc;
 }
@@ -49,18 +49,18 @@ p {
 
 .movie-card {
   width: 220px;
-  background-color: #1a1a3a; /* Fondo azul oscuro */
+  background-color: #1a1a3a;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4); /* Efecto neón */
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  margin: 0 auto; /* Center card horizontally */
+  margin: 0 auto;
 }
 
 .movie-card:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6); /* Efecto neón brillante */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
 }
 
 .movie-card img {
@@ -73,7 +73,7 @@ p {
 
 .movie-card img:hover {
   filter: brightness(1);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brillo neón */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
 }
 
 .movie-card h3 {
@@ -92,7 +92,7 @@ p {
 
 .movie-card p {
   font-size: 1.1rem;
-  color: #00e6e6; /* Cian brillante */
+  color: #00e6e6;
   margin-bottom: 15px;
   text-align: justify;
 }
@@ -102,7 +102,7 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 3px 15px;
-  background-color: #1f1f4d; /* Fondo oscuro azul */
+  background-color: #1f1f4d;
   border-radius: 12px;
   box-shadow: 0 0 5px #00d1ff;
   margin-bottom: 2px;
@@ -153,7 +153,6 @@ button:focus {
   outline: none;
 }
 
-/* Página de detalles de película */
 .movie-details {
   display: flex;
   flex-direction: column;
@@ -161,7 +160,7 @@ button:focus {
   margin: 0 auto;
   padding: 30px;
   max-width: 800px;
-  background-color: #1a1a3a; /* Fondo azul oscuro */
+  background-color: #1a1a3a;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
 }
@@ -192,15 +191,14 @@ button:focus {
 .movie-item {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items in the flex container */
+  align-items: center;
 }
 .movie-item p {
-  max-width: 400px; /* Limit the width of the text */
-  margin: 15px auto; /* Center the text */
+  max-width: 400px;
+  margin: 15px auto;
   text-align: justify;
 }
 
-/* Botón de volver a la página principal */
 .back-button {
   display: inline-block;
   padding: 10px 20px;
@@ -227,13 +225,12 @@ a {
   text-decoration: none;
 }
 
-/* Barra de navegación estilo neón */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background-color: #1f1f4d; /* Fondo azul oscuro */
+  background-color: #1f1f4d;
   border-bottom: 2px solid #007acc;
   box-shadow: 0 0 15px rgba(0, 0, 255, 0.4);
 }

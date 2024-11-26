@@ -9,11 +9,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Página principal */}
-        <Route path="/pelicula/:id" element={<MovieDetails />} />{" "}
-        {/* Detalles */}
+        <Route path="/" element={<Home />} /> {}
+        <Route path="/pelicula/:id" element={<MovieDetails />} /> {}
         <Route path="/recomendaciones" element={<Recommendations />} />
-        <Route path="*" element={<NotFound />} /> {/* Error 404 */}
+        <Route path="*" element={<NotFound />} /> {}
       </Routes>
     </Router>
   );
