@@ -43,7 +43,7 @@ function Home() {
         );
       }
     } catch (error) {
-      console.error("Error fetching movies:", error); // maneja errores en la peticion
+      console.error("Error fetching movies:", error);
       setHasMore(false);
     }
   };
